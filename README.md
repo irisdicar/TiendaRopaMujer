@@ -27,18 +27,20 @@ ________________________________________
 # Software y Hardware requerido
 I) Software requerido
 1.	Windows
-2.	Maven
-3.	JDK
-4.	Http Server
-5.	MySQL and MySQL drivers
+2.	HTML
+3.	PHP
+4.	JDK
+5.	Http Server
+6.	MySQL and MySQL drivers
+
 II) Hardware requerido
 1.	Minimum 8 GB RAM
 2.	Minimum 12 GB Available Disk Space
 3.	Wifi Availablility
 
 # Especificaciones técnicas de Proyecto
-* Este proyecto esta elaborado en el elengauje de programacion HTML y utiliza PHP como Back-end
-* El código angular se compila primero usando comandos 
+* Este proyecto esta elaborado en el lenguaje de programacion HTML y utiliza PHP como Back-end
+*  El código angular se compila primero usando comandos 
 angular-cli, 
  luego la salida se mueve al directorio www de cordova.
 Después de lo cual,
@@ -48,41 +50,36 @@ Después de lo cual,
  equipo de diseño de XYZ Company Pvt Ltd Mumbai 
 
 ________________________________________
-Setup Instructions
-As mentioned earlier , this is a cordova-angular project,
-The below mentioned steps may vary significantly across various operating systems, please follow them accordingly.
-These instructions are aimed at a developer who has been added to the project team, after the project development has already been initiated,
-Therefore the aim is to get the code from the git repository to run on the developer's system, so as to allow him / her to continue with further development.
+# Instrucciones de configuración
+Como se mencionó anteriormente, este es un proyecto cordovaangular.
+Los pasos mencionados a continuación pueden variar 
+significativamente en varios sistemas operativos, sígalos en 
+consecuencia. Estas instrucciones están dirigidas a un 
+desarrollador que se ha agregado al equipo del proyecto, 
+después de que el desarrollo del proyecto ya se haya 
+iniciado, por lo tanto, el objetivo es obtener el código del 
+repositorio de git para que se ejecute en el sistema del 
+desarrollador, a fin de permitirle continuar con un mayor 
+desarrollo.
 ________________________________________
-Clone the repository from GitLab :
-git clone git@gitserver.abccompanygit.com:root/rocket.git
-Change current working directory to Project directory
-cd Rocket
-( This is the cordova as well as the angular root folder. )
-Checking out the latest development branch
-As of writing this guide the main branch used for development is : develop
-To switch to this branch run :
-git checkout develop
-Installing dependencies
-This project requires cordova for running, You can install it by referring to the official cordova page : [https://cordova.apache.org/]
-The cordova version used at the time of writing this file is : 8.1.2 You can check the installed version using cordova -v
-The config.xml file contains the list of all cordova plugins and platforms used for this project. Please ensure this file is updated incase any plugin is added / removed.
-Please follow below steps for installation :
-Install Angular and Cordova NPM Dependencies
-npm i
-Next install cordova platforms and plugins
-cordova prepare
-Incase you get errors as : Current working directory is not a Cordova-based project.
-The www folder used by cordova cli to detect a cordova project might be missing Simply make an empty www folder via file manager or via commandline as :
-mkdir www
-Install cordova android platform
-cordova platform add android
+# Obtención de código git en el sistema local
+Esta sección debe incluir los comandos necesarios para 
+obtener el código fuente del repositorio de git. Una vez 
+hecho esto, los comandos necesarios para verificar la rama 
+adecuada en la que el desarrollador necesita seguir 
+trabajando.
+
+# Clone the repository from GitLab :
+Clone el repositorio de GitLab:
+git clone git@gitserver.abccompanygit.com: root / rocket.git
+ 
+#Cambiar el directorio de trabajo actual al directorio del 
+proyecto:
+cd Rocket(Esta es la carpeta cordova y la raíz angular).
+Comprobando la última rama de desarrollo:
+En el momento de escribir esta guía, la rama principal 
+utilizada para el desarrollo es: desarrollar
+Para cambiar a esta rama: git checkout desarrollar
 ________________________________________
-Start the http and mysql xampp server :
-xampp http start
-xampp mysql start
-sudo service kurento-media-server-6.0 start
-________________________________________
-Note for future developers
-Home is an addon module which adds search by name functionality to the core code The files in the above directory when included in the index file overwrites methods, variables, css in the core code and manipulates the DOM at runtime by adding / removing elements. Thus the entire search logic is separated and can be included on demand, This is the first attempt of adding additional features as modules Future features if any should also be done in the same way, The core code should only be modified for bug fixes or core updates Any new feature either core or customer specific should be implemented as a pluggable module in the /project_directory/src/main/resources/static/addons/ directory
+
 
